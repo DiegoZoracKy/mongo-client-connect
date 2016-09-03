@@ -1,0 +1,33 @@
+{
+  "name": "mongo-client-connect",
+  "version": "1.0.0",
+  "description": "Provides an easy way to specify N collections from N connectionURIs to be retrieved at once, in one call (DRY!). It reuses the same connection objects (creating only one connection pool per connectionURI) and collection instances, avoiding the creation of many, unnecessary, connections pools to a same connectionURI.",
+  "main": "./lib/mongo-client-connect.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.9"
+  },
+  "author": {
+    "name": "Diego ZoracKy",
+    "email": "diego.zoracky@gmail.com",
+    "url": "diegozoracky.com",
+    "twitter": "@diegozoracky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DiegoZoracKy/mongo-client-connect.git"
+  },
+  "bugs": "https://github.com/DiegoZoracKy/mongo-client-connect/issues",
+  "keywords": [
+    "mongodb",
+    "connect",
+    "connection",
+    "mongoclient",
+    "avoids leak",
+    "connection pool",
+    "pool"
+  ],
+  "license": "MIT"
+}
