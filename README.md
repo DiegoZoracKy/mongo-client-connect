@@ -1,5 +1,7 @@
 # Mongo Client Connect
-Provides an easy way to specify *N* collections from *N* connectionURIs to be retrieved at once, in one call (**DRY!**). It reuses the same **connection** objects (**creating only one connection pool per connectionURI**) and **collection** instances, avoiding the creation of many, unnecessary, connections pools to a same connectionURI.
+Reuses the same **connection** objects (**creating only one connection pool per connectionURI**) and **collection** instances, avoiding the creation of many, unnecessary, connections pools to a same connectionURI.
+
+It also provides an easy way to specify *N* collections from *N* connectionURIs to be retrieved at once, in one call (**DRY!**).
 
 **[Mongo DB Native NodeJS Driver](https://github.com/mongodb/node-mongodb-native)** is the engine under the hood.
 

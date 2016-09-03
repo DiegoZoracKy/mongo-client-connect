@@ -1,7 +1,7 @@
 {
   "name": "mongo-client-connect",
-  "version": "1.0.5",
-  "description": "Provides an easy way to specify N collections from N connectionURIs to be retrieved at once, in one call (DRY!). It reuses the same connection objects (creating only one connection pool per connectionURI) and collection instances, avoiding the creation of many, unnecessary, connections pools to a same connectionURI.",
+  "version": "1.0.6",
+  "description": "It reuses the same connection objects (creating only one connection pool per connectionURI) and collection instances, avoiding the creation of many, unnecessary, connections pools to a same connectionURI. Also provides an easy way to specify N collections from N connectionURIs to be retrieved at once, in one call (DRY!).",
   "main": "./lib/mongo-client-connect.js",
   "directories": {
     "lib": "lib"
