@@ -106,5 +106,4 @@ MongoClientConnect({
 .then(([{ alias1 }, { alias2, alias3 }]) => {
 	console.log(alias1.s.name, alias2.s.name, alias3.s.name);
 });
-})
 ```
