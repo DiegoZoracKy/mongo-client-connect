@@ -48,7 +48,7 @@ MongoClientConnect([
 });
 ```
 
-### Connects and gets Collections (by `Array`)
+### Connect and gets Collections
 
 It will connect and return the collections that has been asked for.
 
@@ -65,19 +65,7 @@ MongoClientConnect('mongodb://localhost/dbName', [
 });
 ```
 
-### Connects and gets Collections (by `Object`)
-
-It will connect and return collections, the same as above, but the collections are specified by an `Object`, in case you need to define collections alias for your code.
-
-```javascript
-MongoClientConnect('mongodb://localhost/dbName', { someAlias: 'dbCollectionName' })
-	.then(({ someAlias }) => {
-    	// 'someAlias' will be a reference to collection 'dbCollectionName'
-		someAlias.find({}).toArray().then(r => console.log(r.length))
-	});
-```
-
-### Connect to many DBs and get Collections (by `Array`)
+### Connect to many DBs and get Collections
 
 It connects to N MongoDBs and returns collections for each of them.
 
@@ -91,9 +79,21 @@ MongoClientConnect({
 })
 ```
 
+### Connect and gets Collections (by `Object`)
+
+It will connect and return collections, the same as above, but the collections are specified by an `Object`, in case you prefer the response to be an Object. The collections can also be configured with an alias.
+
+```javascript
+MongoClientConnect('mongodb://localhost/dbName', { someAlias: 'dbCollectionName' })
+	.then(({ someAlias }) => {
+    	// 'someAlias' will be a reference to collection 'dbCollectionName'
+		someAlias.find({}).toArray().then(r => console.log(r.length))
+	});
+```
+
 ### Connect to many DBs and get Collections (by `Object`)
 
-Same as above, it connects to N MongoDBs and returns collections for each of them, but defining collections as an `Object` in case you need to define collections alias.
+Same as above, it connects to N MongoDBs and returns collections for each of them, but defining collections as an `Object` in case you prefer the response to be an Object. The collections can also be configured with an alias.
 
 ```javascript
 MongoClientConnect({
